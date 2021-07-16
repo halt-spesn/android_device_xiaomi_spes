@@ -418,6 +418,10 @@ PRODUCT_PACKAGES += \
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
 
+# Remove Unwanted Packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
