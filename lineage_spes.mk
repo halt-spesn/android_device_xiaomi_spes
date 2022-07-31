@@ -14,12 +14,11 @@ $(call inherit-product, device/xiaomi/spes/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Additions
-$(call inherit-product-if-exists, vendor/gapps/basic/config.mk)
-$(call inherit-product-if-exists, vendor/prebuilt-apps/config.mk)
+# Gapps
+$(call inherit-product-if-exists, vendor/gapps/core/config.mk)
 
-# Camera
-$(call inherit-product-if-exists, vendor/miuicamera/config.mk)
+# Prebuilt apps
+$(call inherit-product-if-exists, vendor/prebuilt-apps/config.mk)
 
 # Product Specifics
 PRODUCT_NAME := lineage_spes
