@@ -65,7 +65,6 @@ hal_client_domain(system_server, vendor_hal_iop)
 hal_client_domain(system_server, vendor_hal_srvctracker)
 
 binder_call(system_server, vendor_hal_srvctracker_default)
-binder_call(system_server, vendor_qvrd_vndr)
 
 allow system_server vendor_proc_audiod:file r_file_perms;
 
