@@ -590,7 +590,7 @@
     <integer name="config_defaultPeakRefreshRate">90</integer>
 
     <!-- Indicates whether device has a power button fingerprint sensor. -->
-    <bool name="config_is_powerbutton_fps" translatable="false" >true</bool>
+    <bool name="config_is_powerbutton_fps" translatable="false">true</bool>
 
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
     <integer name="config_screenRecorderMaxFramerate">90</integer>
@@ -631,8 +631,8 @@
     <array name="config_sfps_sensor_props_0" translatable="false">
         <item></item>
         <item></item>
-        <item>930</item>
-        <item>150</item>
+        <item>930</item> <!--item>sensorLocationY</item-->
+        <item>150</item> <!--item>sensorRadius</item-->
     </array>
 
     <!-- The list of components which should be automatically disabled for a specific package. -->
