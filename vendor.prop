@@ -254,6 +254,11 @@ ro.vendor.audio.soundtrigger.xatx.gmm.user.level=40
 ro.vendor.audio.soundtrigger.xatx.vop.level=10
 ro.vendor.audio.soundtrigger=sva
 
+# Suspend properties
+suspend.short_suspend_threshold_millis=2000
+suspend.short_suspend_backoff_enabled=true
+suspend.max_sleep_time_millis=40000
+
 # Touch Hax
 touch.size.scale=1
 touch.size.bias=0
