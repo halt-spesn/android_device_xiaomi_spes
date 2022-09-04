@@ -19,7 +19,7 @@
     <!-- the padding on the start of the statusbar -->
     <dimen name="status_bar_padding_start">12dp</dimen>
 
-    <!-- for 20dp of padding at 3.5px/dp at default density -->
+    <!-- padding around the status bar -->
     <dimen name="rounded_corner_content_padding">47.0px</dimen>
 
     <!-- Location on the screen of the center of the physical power button. -->
