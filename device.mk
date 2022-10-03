@@ -244,7 +244,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.incremental.enable=1
 
 # Fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.1-impl-custom \
+    android.hardware.fastboot@1.1-impl.custom \
     fastbootd
 
 # GNSS
