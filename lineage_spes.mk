@@ -17,9 +17,6 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Gapps
 $(call inherit-product-if-exists, vendor/gapps/core/config.mk)
 
-# Prebuilt apps
-$(call inherit-product-if-exists, vendor/prebuilt-apps/config.mk)
-
 # Product Specifics
 PRODUCT_NAME := lineage_spes
 PRODUCT_DEVICE := spes
