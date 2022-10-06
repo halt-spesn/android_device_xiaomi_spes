@@ -9,6 +9,3 @@ rm -rf hardware/google/pixel/kernel_headers/Android.bp
 
 # Vendor
 git clone --depth=1 https://github.com/Jabiyeff/android_vendor_xiaomi_spes.git -b 12.1 vendor/xiaomi/spes
-
-# Gapps
-git clone --depth=1 https://gitlab.com/crdroidandroid/android_vendor_gapps.git -b 12.1 vendor/gapps
