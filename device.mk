@@ -148,6 +148,10 @@ PRODUCT_PACKAGES += \
     BluetoothQti \
     libbthost_if
 
+# Bootanimation
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2400
+
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti \
