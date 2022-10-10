@@ -456,6 +456,10 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+# Screen density
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.multihal \
