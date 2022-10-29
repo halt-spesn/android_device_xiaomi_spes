@@ -111,6 +111,7 @@ drm.service.enabled=true
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Graphics
+debug.sf.auto_latch_unsignaled=true
 debug.renderengine.backend=threaded
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
