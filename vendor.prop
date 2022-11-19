@@ -111,6 +111,7 @@ drm.service.enabled=true
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Graphics
+debug.sdm.support_writeback=0
 debug.sf.auto_latch_unsignaled=true
 debug.renderengine.backend=skiaglthreaded
 debug.sf.disable_client_composition_cache=1
