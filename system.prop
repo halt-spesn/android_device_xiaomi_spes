@@ -114,6 +114,9 @@ persist.data.df.ul_mode=5
 persist.data.wda.enable=true
 persist.rmnet.data.enable=true
 
+# SF
+ro.sf.use_latest_hwc_vsync_period=0
+
 # Skia
 debug.hwui.skia_atrace_enabled=false
 renderthread.skia.reduceopstasksplitting=true
