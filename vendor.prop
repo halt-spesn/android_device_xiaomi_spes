@@ -269,7 +269,7 @@ ro.hardware.wlan.dbs=0
 ro.telephony.iwlan_operation_mode=legacy
 
 # SoC
-ro.soc.manufacturer=Qualcomm
+ro.soc.manufacturer=QTI
 ro.soc.model=SM6225
 
 # Zygote
