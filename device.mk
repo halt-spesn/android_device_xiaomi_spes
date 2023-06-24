@@ -449,6 +449,10 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
 
+# Storage
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.fuse.passthrough.enable=true
+
 # Telephony
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
