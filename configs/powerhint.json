@@ -3,11 +3,7 @@
     {
       "Name": "CPULittleClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
-      "Values": [
-        "1900800",
-        "1516800",
-        "1190400"
-      ],
+      "Values": ["1900800", "1516800", "1190400"],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
@@ -29,12 +25,7 @@
     {
       "Name": "CPUBigClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq",
-      "Values": [
-        "2400000",
-        "2208000",
-        "1766400",
-        "1344000"
-      ],
+      "Values": ["2400000", "2208000", "1766400", "1344000"],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
@@ -56,209 +47,129 @@
     {
       "Name": "GPUMaxFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/max_pwrlevel",
-      "Values": [
-        "0",
-        "1",
-        "2"
-      ],
+      "Values": ["0", "1", "2"],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "GPUMinFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/min_pwrlevel",
-      "Values": [
-        "0",
-        "3",
-        "4",
-        "5"
-      ],
+      "Values": ["0", "3", "4", "5"],
       "ResetOnInit": true
     },
     {
       "Name": "GPUBusMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,gpubw/min_freq",
-      "Values": [
-        "15960",
-        "4173",
-        "3440",
-        "1525",
-        "762",
-        "0"
-      ],
+      "Values": ["15960", "4173", "3440", "1525", "762", "0"],
       "ResetOnInit": true
     },
     {
       "Name": "GPUForceRailOn",
       "Path": "/sys/class/kgsl/kgsl-3d0/force_rail_on",
-      "Values": [
-        "1",
-        "0"
-      ],
+      "Values": ["1", "0"],
       "ResetOnInit": true
     },
     {
       "Name": "GPUForceClkOn",
       "Path": "/sys/class/kgsl/kgsl-3d0/force_clk_on",
-      "Values": [
-        "1",
-        "0"
-      ],
+      "Values": ["1", "0"],
       "ResetOnInit": true
     },
     {
       "Name": "GPUIdleTimer",
       "Path": "/sys/class/kgsl/kgsl-3d0/idle_timer",
-      "Values": [
-        "10000",
-        "64"
-      ],
+      "Values": ["10000", "64"],
       "ResetOnInit": true
     },
     {
       "Name": "TASchedtuneBoost",
       "Path": "/dev/stune/top-app/schedtune.boost",
-      "Values": [
-        "5",
-        "1"
-      ],
+      "Values": ["5", "1"],
       "ResetOnInit": true
     },
     {
       "Name": "CDSchedtuneBoost",
       "Path": "/dev/stune/camera-daemon/schedtune.boost",
-      "Values": [
-        "1",
-        "0"
-      ],
+      "Values": ["1", "0"],
       "ResetOnInit": true
     },
     {
       "Name": "CPUBWHystTriggerCount",
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_trigger_count",
-      "Values": [
-        "0",
-        "3"
-      ],
+      "Values": ["0", "3"],
       "ResetOnInit": true
     },
     {
       "Name": "CPUBWHistMemory",
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hist_memory",
-      "Values": [
-        "0",
-        "20"
-      ],
+      "Values": ["0", "20"],
       "ResetOnInit": true
     },
     {
       "Name": "CPUBWHystLength",
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_length",
-      "Values": [
-        "0",
-        "10"
-      ],
+      "Values": ["0", "10"],
       "ResetOnInit": true
     },
     {
       "Name": "CPUBWSampleMs",
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/sample_ms",
-      "Values": [
-        "10",
-        "4"
-      ],
+      "Values": ["10", "4"],
       "ResetOnInit": true
     },
     {
       "Name": "CPUBWIOPercent",
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/io_percent",
-      "Values": [
-        "80",
-        "34"
-      ],
+      "Values": ["80", "34"],
       "ResetOnInit": true
     },
     {
       "Name": "CPUBWMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/min_freq",
-      "Values": [
-        "15960",
-        "11863",
-        "7759",
-        "5859",
-        "4173",
-        "1525"
-      ],
+      "Values": ["15960", "11863", "7759", "5859", "4173", "1525"],
       "ResetOnInit": true
     },
     {
       "Name": "DDRLittleClusterMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,cpu0-cpu-ddr-lat/min_freq",
-      "Values": [
-        "15960",
-        "11863",
-        "5859",
-        "4173",
-        "1525"
-      ],
+      "Values": ["15960", "11863", "5859", "4173", "1525"],
       "ResetOnInit": true
     },
     {
       "Name": "DDRBigClusterMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,cpu4-cpu-ddr-lat/min_freq",
-      "Values": [
-        "15960",
-        "11863",
-        "5859",
-        "4173",
-        "1525"
-      ],
+      "Values": ["15960", "11863", "5859", "4173", "1525"],
       "ResetOnInit": true
     },
     {
       "Name": "PMQoSCpuDmaLatency",
       "Path": "/dev/cpu_dma_latency",
-      "Values": [
-        "44",
-        "100"
-      ],
+      "Values": ["44", "100"],
       "DefaultIndex": 1,
       "HoldFd": true
     },
     {
       "Name": "EnergyAware",
       "Path": "/proc/sys/kernel/sched_energy_aware",
-      "Values": [
-        "0",
-        "1"
-      ],
+      "Values": ["0", "1"],
       "ResetOnInit": true
     },
     {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
-      "Values": [
-        "SUSTAINED_PERFORMANCE",
-        ""
-      ],
+      "Values": ["SUSTAINED_PERFORMANCE", ""],
       "Type": "Property"
     },
     {
       "Name": "PowerHALAudioState",
       "Path": "vendor.powerhal.audio",
-      "Values": [
-        "AUDIO_STREAMING_LOW_LATENCY",
-        ""
-      ],
+      "Values": ["AUDIO_STREAMING_LOW_LATENCY", ""],
       "Type": "Property"
     },
     {
       "Name": "PowerHALRenderingState",
       "Path": "vendor.powerhal.rendering",
-      "Values": [
-        "EXPENSIVE_RENDERING",
-        ""
-      ],
+      "Values": ["EXPENSIVE_RENDERING", ""],
       "Type": "Property"
     }
   ],
@@ -607,4 +518,3 @@
     }
   ]
 }
-

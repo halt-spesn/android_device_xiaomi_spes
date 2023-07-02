@@ -17,7 +17,7 @@ ro.bluetooth.wipower=false
 
 # Camera
 camera.disable_zsl_mode=1
-vendor.camera.aux.packagelist=com.android.camera,app.grapheneos.camera,org.lineageos.aperture,org.lineageos.aperture.dev
+vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera,com.android.MGC
 
 # Charger
 persist.vendor.quick.charge=1
@@ -58,7 +58,6 @@ persist.log.tag.IntervalStats=S
 persist.log.tag.CompatibilityChangeReporter=S
 persist.log.tag.SQLiteLog=S
 persist.log.tag.wificond=S
-persist.log.tag.b/223498680=S
 persist.log.tag.TrafficStats=S
 persist.log.tag.ContrastColorUtil=S
 
