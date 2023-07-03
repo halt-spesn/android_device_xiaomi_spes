@@ -68,7 +68,7 @@
         <item>restart_recovery</item>
         <item>restart_bootloader</item>
         <item>restart_fastboot</item>
-     </string-array>
+    </string-array>
 
     <!-- The list of components which should be automatically disabled for a specific package. -->
     <string-array name="config_deviceDisabledComponents" translatable="false">
