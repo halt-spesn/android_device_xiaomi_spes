@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 DerpFest
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+     <!-- Whether show refresh rate QS tile -->
+     <bool name="config_showRefreshRateQsTile">true</bool>
+
+     <!-- Max visible notification icons -->
+     <integer name="config_maxVisibleNotificationIcons">3</integer>
+     <integer name="config_maxVisibleNotificationIconsOnLock">4</integer>
+</resources>

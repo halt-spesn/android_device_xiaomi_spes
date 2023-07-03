@@ -19,3 +19,11 @@ Redmi Note 11 was announced and released in January/February 2022.
 |                  Camera | Main 50 MP f/1.8, ultrawide lens, macro lens, depth lens, LED flash |
 
 ## Device picture ![Redmi Note 11](https://i.imgur.com/WfbCmGR.png "Redmi Note 11")
+
+```bash
+git clone -b derp https://github.com/parixxshit/android_device_xiaomi_spes.git device/xiaomi/spes
+```
+
+```bash
+. build/envsetup.sh && lunch derp_spes-user && mka derp
+```

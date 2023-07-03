@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2023 The DerpFest Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,15 +8,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from spes/spesn device
+# Inherit some common DerpFest stuff.
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+
+# Inherit from spes device
 $(call inherit-product, device/xiaomi/spes/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-# Product Specifics
-PRODUCT_NAME := lineage_spes
 PRODUCT_DEVICE := spes
+PRODUCT_NAME := derp_spes
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 11
 PRODUCT_MANUFACTURER := Xiaomi
