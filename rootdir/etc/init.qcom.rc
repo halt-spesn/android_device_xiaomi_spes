@@ -42,17 +42,6 @@ on early-init
     chown root system /dev/kmsg
     chmod 0620 /dev/kmsg
 
-on init
-    #disable absolute volume
-    setprop  persist.bluetooth.disableabsvol true
-    setprop  persist.sys.btsatck.absvolfeature false
-    setprop  persist.vendor.bt.a2dp.absvolfeature false
-
-on property:persist.vendor.bt.a2dp.absvolfeature=true
-       setprop persist.vendor.bt.a2dp.absvolfeature false
-on property:persist.sys.btsatck.absvolfeature=true
-       setprop persist.sys.btsatck.absvolfeature false
-
 on post-fs
     mkdir /mnt/vendor/dsp 0770 root root
     copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
@@ -299,20 +288,20 @@ service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     user vendor_qrtr
     group vendor_qrtr
     capabilities NET_BIND_SERVICE
-    task_profiles ServiceCapacityLow
+    writepid /dev/cpuset/system-background/tasks
 
 service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
     oneshot
-    task_profiles ServiceCapacityLow
+    writepid /dev/cpuset/system-background/tasks
 
 service vendor.cnss-daemon /vendor/bin/cnss-daemon -n -l
     class late_start
     user system
     group system inet net_admin wifi
     capabilities NET_ADMIN
-    task_profiles ServiceCapacityLow
+    writepid /dev/cpuset/system-background/tasks
 
 on property:sys.shutdown.requested=*
     write /sys/kernel/shutdown_wlan/shutdown 1
@@ -328,7 +317,7 @@ service loc_launcher /vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
-    task_profiles ServiceCapacityLow
+    writepid /dev/cpuset/system-background/tasks
 
 service vendor.qcom-sh /vendor/bin/init.qcom.sh
     class late_start
@@ -343,8 +332,16 @@ service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     disabled
     oneshot
 
+service vendor.display-refresh /vendor/bin/init.display.refresh.sh
+    class late_start
+    user root
+    group root system graphics
+    disabled
+    oneshot
+
 on property:sys.boot_completed=1
     start vendor.qcom-post-boot
+    start vendor.display-refresh
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
@@ -386,7 +383,7 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     group system
     disabled
     oneshot
-    task_profiles ServiceCapacityLow
+    writepid /dev/cpuset/system-background/tasks
 
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
@@ -396,6 +393,22 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
     capabilities BLOCK_SUSPEND
     ioprio rt 4
-    task_profiles ProcessCapacityHigh HighPerformance
+    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     socket audio_hw_socket seqpacket 0666 system system
     onrestart restart audioserver
+
+service logger /system/bin/logcat -b all -D -f /cache/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on post-fs-data
+    # Clear existing log and start the service
+    rm /cache/boot_log.txt
+    start logger
+
+on property:sys.boot_completed=1
+    # Stop the logger service
+    stop logger
