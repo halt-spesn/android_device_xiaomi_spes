@@ -8,13 +8,13 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from spes/spesn device
-$(call inherit-product, device/xiaomi/spes/device.mk)
-
-# Inherit some common LineageOS stuff.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Product Specifics
+# Inherit from spes device
+$(call inherit-product, device/xiaomi/spes/device.mk)
+
+# Device identifier
 PRODUCT_NAME := lineage_spes
 PRODUCT_DEVICE := spes
 PRODUCT_BRAND := Redmi
