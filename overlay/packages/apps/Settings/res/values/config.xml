@@ -14,12 +14,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Battery Health Nodes -->
-    <bool name="config_supportBatteryHealth">true</bool>
-    <string name="config_batteryCalculatedCapacity">/sys/class/power_supply/bms/charge_counter</string>
-    <string name="config_batteryDesignCapacity">/sys/class/power_supply/bms/charge_full</string>
-    <string name="config_batteryChargeCycles">/sys/class/power_supply/bms/cycle_count</string>
-
     <!-- Whether to show the Preference for Adaptive connectivity -->
     <bool name="config_show_adaptive_connectivity">false</bool>
 
