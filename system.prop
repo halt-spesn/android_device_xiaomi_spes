@@ -33,6 +33,9 @@ persist.demo.hdmirotationlock=false
 # FP
 ro.hardware.fp.sideCap=true
 
+# FUSE
+persist.sys.fuse.passthrough.enable=true
+
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
