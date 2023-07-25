@@ -112,6 +112,9 @@ drm.service.enabled=true
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# GFX
+ro.config.avoid_gfx_accel=true
+
 # Graphics
 debug.sdm.support_writeback=0
 debug.sf.auto_latch_unsignaled=true
